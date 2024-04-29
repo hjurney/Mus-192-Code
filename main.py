@@ -68,7 +68,7 @@ Param.Zc = Param.rho * Co / (np.pi * r ** 2) # characteristic impedance
 # ============================
 # Loading the Impulse Response
 # ============================
-data = loadmat('/Users/henryjurney/Downloads/192SeniorProject/impulse_response.mat') # from Dr. Robin Tournemenne over email correspondence (in matlab datatype)
+data = loadmat('/Path_to_file/impulse_response.mat') # from Dr. Robin Tournemenne over email correspondence (in matlab datatype)
 h = data['h'].flatten() # impedance response
 fe = data['fe'].flatten()[0] # sampling frequency (8000 Hz)
 Param.fe = fe
@@ -86,7 +86,7 @@ plt.plot(f, P1)
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Amplitude')
 plt.title('Impulse Response Spectrum')
-plt.savefig('/Users/henryjurney/Downloads/192SeniorProject/imp_res.png')
+plt.savefig('/Path_to_file/imp_res.png')
 plt.show()
 
 Himp = h[:round(fe * 0.2)] #  impulse response of instrument (h) from 0 to 0.2 times the sample frequency (fe) (rounded)
@@ -112,7 +112,7 @@ plt.plot(t, y[2:])
 plt.xlabel('Time (s)')
 plt.ylabel('Lip Displacement (mm)')
 plt.title('y Verses t Graph')
-plt.savefig('/Users/henryjurney/Downloads/192SeniorProject/yvst.png')
+plt.savefig('/Path_to_file/yvst.png')
 plt.show()
 
 # =====================================
@@ -131,7 +131,7 @@ plt.plot(f, P1)
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('fft Amplitude')
 plt.title('fft of Produced Frequencies')
-plt.savefig('/Users/henryjurney/Downloads/192SeniorProject/fftson.png')
+plt.savefig('/Path_to_file/fftson.png')
 plt.show()
 
 # Plot p(t) (the waveform)
@@ -140,9 +140,9 @@ plt.plot(t[0:], p[1:])
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (kPa)')
 plt.title('Pressure vs Time (Waveform)')
-plt.savefig('/Users/henryjurney/Downloads/192SeniorProject/son.png')
+plt.savefig('/Path_to_file/son.png')
 plt.show()
 
 # Write the waveform p(t) into an audiofile
 p2play = p / np.max(np.abs(p)) # normalize the volume
-wavfile.write('/Users/henryjurney/Downloads/192SeniorProject/sib.wav', fe, p2play)
+wavfile.write('/Path_to_file/sib.wav', fe, p2play)
