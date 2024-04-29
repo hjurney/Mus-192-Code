@@ -1,1 +1,8 @@
-The system involving a wind instrument player and their instrument can be conceptualized as a nonlinear dynamical system which can be represented using physical equations. Numerical tools can then be used to study these models and clarify the influence of model parameters on different physical characteristics. This study focuses on the sound synthesis of brass instruments, more particularly trumpets. The sound synthesis method employed uses a classical physical model involving a temporal numerical scheme. While most synthesis methods use wave variables, this model simplifies the representation of the instrument’s resonator by using sampled versions of the physical variables throughout the entire synthesis process. A rudimentary description of how the physical instrument works and its translation into computer code is given, outlining the steps and processes of the entirely-python based code (which is made publicly available in an open source Github repository). Finally, a more detailed application of the model is performed to assess to what extent the simulations reflect the physical phenomena present in real-life trumpets. Results show that while the model accurately represents XXX, more work will need to be done to improve XXX.
+Music 192 Senior Project Code - Trumpet Sound Synthesis Model
+Henry Jurney
+
+This is the corresponding python script that I built and used for my Mus 192 project. Please feel free to use and play with the model yourself, the code should hopefully be commented enough for a basic understanding.
+
+Please reach out to me at henryjurney@gmail.com for the associated paper or issues with the code!
+
+
