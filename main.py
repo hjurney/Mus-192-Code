@@ -102,7 +102,7 @@ pext = [] # initialize empty external pressure array
 
 # Main for loop to calculate y(t), p(t) and u(t)
 for i in range(len(t)): # len(t) = 16000
-    lip_displ(p, y, Param) # calculates y(t) based on 1-dimensional lip displacement model (CITE)
+    lip_displ(p, y, Param) # calculates y(t) based on 1-dimensional lip displacement model
     implicit_func(y, p, u, Param) # solves the implicit equation relating the exciter and the resonator (feedback-loop) for p(t) and u(t)
     pext.append(fe * (p[-1] + u[-1] - (p[-2] + u[-2]))) # creates external pressure array
 
